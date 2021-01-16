@@ -41,7 +41,7 @@ try:
     save_str = ""
     for barcode, apriority in apriori.items():
         for xbarcode, qty in sorted(apriority.items(), key=lambda item: item[1], reverse=True):
-            save_str += all_products[barcode] + " ile " + all_products[xbarcode] + " " + str(qty) + " defa beraber satın alınmış.\n"
+            save_str += all_products[barcode] + " and " + all_products[xbarcode] + " products bought together " + str(qty) + " times.\n"
             print(all_products[barcode] + " and " + all_products[xbarcode] + " products bought together " + str(qty) + " times.")
         save_str += "\n"
         print("")
